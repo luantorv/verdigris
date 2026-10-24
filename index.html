@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Verdigris: sistema de diseño oscuro, técnico, cálido y modular para herramientas de desarrollo.">
+  <meta name="theme-color" content="#141310">
+  <title>Verdigris — design system</title>
+  <link rel="stylesheet" href="tokens/tokens.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Verdigris, inicio">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M3 5h7l6 16 6-16h7l-9 22h-8z" fill="currentColor"/>
+      </svg>
+      <span>VERDIGRIS</span>
+      <span class="version">0.1</span>
+    </a>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="#foundations">Fundamentos</a>
+      <a href="#components">Componentes</a>
+      <a href="#tokens">Tokens</a>
+      <a class="nav-source" href="DESIGN.md">Especificación <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> SYSTEM / VISUAL LANGUAGE</p>
+        <h1 id="hero-title">Oscuro.<br>Técnico. <span>Vivo.</span></h1>
+        <p class="hero-lede">Un lenguaje visual cálido y modular para escritorios, editores y herramientas de desarrollo. Diseñado para que la información tenga ritmo, estructura y propósito.</p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="#foundations">Explorar el sistema <span aria-hidden="true">↓</span></a>
+          <a class="button button--secondary" href="tokens/tokens.json">Ver tokens.json</a>
+        </div>
+        <dl class="hero-facts">
+          <div><dt>Modo</dt><dd>Dark only</dd></div>
+          <div><dt>Base</dt><dd>4 px grid</dd></div>
+          <div><dt>Fuente</dt><dd>JetBrains Mono</dd></div>
+        </dl>
+      </div>
+
+      <div class="workbench" aria-label="Vista de ejemplo de una herramienta Verdigris">
+        <div class="workbench-bar">
+          <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>verdigris / workspace</span>
+          <span>main*</span>
+        </div>
+        <div class="workbench-body">
+          <aside class="workbench-files" aria-label="Archivos de ejemplo">
+            <p class="mini-label">EXPLORER</p>
+            <ul>
+              <li class="is-active"><span>◆</span> DESIGN.md</li>
+              <li><span>#</span> tokens.css</li>
+              <li><span>{ }</span> tokens.json</li>
+              <li><span>›_</span> colors.nix</li>
+            </ul>
+          </aside>
+          <div class="workbench-code" aria-hidden="true">
+            <div class="code-tabs"><span class="active">tokens.css</span><span>preview.html</span></div>
+            <pre><span class="ln">01</span> <span class="syntax-blue">:root</span> {
+<span class="ln">02</span>   <span class="syntax-muted">/* identity */</span>
+<span class="ln">03</span>   <span class="syntax-lavender">--vg-color-accent</span>: <span class="syntax-green">#17c0ae</span>;
+<span class="ln">04</span>   <span class="syntax-lavender">--vg-color-bg</span>: <span class="syntax-green">#141310</span>;
+<span class="ln">05</span>   <span class="syntax-lavender">--vg-space-4</span>: <span class="syntax-sand">16px</span>;
+<span class="ln">06</span> }
+<span class="ln">07</span>
+<span class="ln">08</span> <span class="syntax-blue">.panel</span> {
+<span class="ln">09</span>   <span class="syntax-lavender">background</span>: <span class="syntax-blue">var</span>(--vg-color-surface);
+<span class="ln">10</span>   <span class="syntax-lavender">border</span>: <span class="syntax-sand">1px</span> solid var(--vg-color-border);
+<span class="ln">11</span> }</pre>
+            <div class="terminal-line"><span>~/verdigris</span> <b>git status</b><i>core ready</i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto ruled-section" aria-labelledby="manifesto-title">
+      <p class="section-index">01 / INTENT</p>
+      <div>
+        <h2 id="manifesto-title">Reconocible incluso<br>sin el color.</h2>
+        <p>La identidad no depende de pintar cada elemento. Vive en la cuadrícula, la densidad, los bordes finos y una jerarquía que sigue funcionando en escala de grises.</p>
+      </div>
+      <div class="principle-list">
+        <p><span>01</span> Estructura antes que acento.</p>
+        <p><span>02</span> Superficie antes que sombra.</p>
+        <p><span>03</span> Estado antes que decoración.</p>
+      </div>
+    </section>
+
+    <section class="section" id="foundations" aria-labelledby="foundations-title">
+      <div class="section-heading">
+        <p class="section-index">02 / FOUNDATIONS</p>
+        <h2 id="foundations-title">Una paleta cálida<br>para trabajo profundo.</h2>
+        <p>Los neutros marrones reducen la frialdad del entorno. Los acentos tienen trabajos concretos, no compiten por atención.</p>
+      </div>
+
+      <div class="palette" aria-label="Paleta principal">
+        <button class="swatch swatch--black" data-copy="#141310"><span>Black</span><code>#141310</code></button>
+        <button class="swatch swatch--white" data-copy="#f4f1f0"><span>White</span><code>#f4f1f0</code></button>
+        <button class="swatch swatch--grey" data-copy="#c7afab"><span>Grey</span><code>#c7afab</code></button>
+        <button class="swatch swatch--darkblue" data-copy="#5589f7"><span>Dark blue</span><code>#5589f7</code></button>
+        <button class="swatch swatch--lightblue" data-copy="#2ea1c7"><span>Light blue</span><code>#2ea1c7</code></button>
+        <button class="swatch swatch--green" data-copy="#17c0ae"><span>Green</span><code>#17c0ae</code></button>
+        <button class="swatch swatch--sand" data-copy="#e3be3c"><span>Sand</span><code>#e3be3c</code></button>
+        <button class="swatch swatch--red" data-copy="#f23a50"><span>Red</span><code>#f23a50</code></button>
+        <button class="swatch swatch--lavender" data-copy="#ae9afb"><span>Lavender</span><code>#ae9afb</code></button>
+      </div>
+      <p class="copy-hint" aria-live="polite" id="copy-status">Selecciona una muestra para copiar su valor.</p>
+
+      <div class="surface-section">
+        <div class="subheading">
+          <p class="mini-label">SURFACES / 00—04</p>
+          <h3>Profundidad sin sombras.</h3>
+        </div>
+        <div class="surface-stack" aria-label="Escala de superficies">
+          <div class="surface surface--0"><span>00</span><b>BASE</b><code>#141310</code></div>
+          <div class="surface surface--1"><span>01</span><b>RAISED</b><code>#1b1917</code></div>
+          <div class="surface surface--2"><span>02</span><b>ELEVATED</b><code>#24201e</code></div>
+          <div class="surface surface--3"><span>03</span><b>ACTIVE</b><code>#302b29</code></div>
+          <div class="surface surface--4"><span>04</span><b>BORDER</b><code>#3a3432</code></div>
+        </div>
+      </div>
+
+      <div class="type-geometry">
+        <div class="type-specimen">
+          <p class="mini-label">TYPOGRAPHY / JETBRAINS MONO</p>
+          <p class="type-display">Build systems,<br><span>not noise.</span></p>
+          <div class="type-row"><span>Aa</span><p>Interfaz / 14 px / Regular<br><small>0123456789 — &lt;syntax&gt;</small></p></div>
+        </div>
+        <div class="geometry-specimen">
+          <p class="mini-label">GEOMETRY / 4 PX BASE</p>
+          <div class="spacing-ruler" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <dl>
+            <div><dt>Spacing</dt><dd>04 · 08 · 12 · 16 · 24 · 32</dd></div>
+            <div><dt>Radius</dt><dd>02 · 04 · 06</dd></div>
+            <div><dt>Controls</dt><dd>28 · 32 · 36</dd></div>
+            <div><dt>Border</dt><dd>01</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section components-section" id="components" aria-labelledby="components-title">
+      <div class="section-heading section-heading--row">
+        <div>
+          <p class="section-index">03 / COMPONENTS</p>
+          <h2 id="components-title">Estados que hablan.</h2>
+        </div>
+        <div>
+          <p>Controles compactos, respuestas claras y significado consistente.</p>
+          <button class="density-toggle" type="button" aria-pressed="false"><span></span> Densidad compacta</button>
+        </div>
+      </div>
+
+      <div class="component-lab" id="component-lab">
+        <div class="lab-block lab-buttons">
+          <p class="mini-label">BUTTONS / ACTION HIERARCHY</p>
+          <div class="button-row">
+            <button class="button button--primary demo-action" type="button">Apply changes</button>
+            <button class="button button--secondary" type="button">Preview</button>
+            <button class="button button--ghost" type="button">Cancel</button>
+            <button class="button button--danger" type="button">Delete</button>
+            <button class="button button--secondary" type="button" disabled>Unavailable</button>
+          </div>
+        </div>
+
+        <div class="lab-block lab-form">
+          <p class="mini-label">INPUTS / FEEDBACK</p>
+          <div class="field-grid">
+            <label class="field"><span>Workspace name</span><input value="verdigris" autocomplete="off"></label>
+            <label class="field field--error"><span>Remote port</span><input value="99999" aria-invalid="true" aria-describedby="port-error" inputmode="numeric"><small id="port-error">Port must be between 1 and 65535.</small></label>
+          </div>
+        </div>
+
+        <div class="lab-metrics">
+          <article class="metric"><p>CPU USAGE <span>LIVE</span></p><strong>24<small>%</small></strong><progress value="24" max="100">24%</progress><footer>8 cores · 3.8 GHz</footer></article>
+          <article class="metric"><p>MEMORY <span class="blue">6.2 / 10 GB</span></p><strong class="blue-text">61<small>%</small></strong><progress class="progress-blue" value="61" max="100">61%</progress><footer>stable · 42 min</footer></article>
+          <article class="metric"><p>BUILD STATUS <span class="warning-text">1 WARNING</span></p><strong class="warning-text">02<small>:14</small></strong><div class="build-steps" aria-label="Tres de cuatro etapas completas"><i></i><i></i><i></i><i></i></div><footer>tests complete</footer></article>
+        </div>
+
+        <div class="lab-bottom">
+          <div class="notices">
+            <aside class="notice notice--warning" role="status">
+              <div><p>WARNING · UPDATE AVAILABLE</p><span>Una nueva configuración está lista para aplicar.</span></div>
+              <button type="button" class="notice-close" aria-label="Cerrar aviso">×</button>
+            </aside>
+            <aside class="notice notice--info" role="status">
+              <div><p>INFO · TOKENS SYNCED</p><span>18 variables actualizadas en los adaptadores.</span></div>
+              <button type="button" class="notice-close" aria-label="Cerrar aviso">×</button>
+            </aside>
+          </div>
+          <div class="state-list">
+            <p class="mini-label">SYSTEM / SERVICES</p>
+            <div><span class="indicator indicator--ok"></span><b>design-tokens</b><small>running</small></div>
+            <div><span class="indicator indicator--info"></span><b>preview-server</b><small>listening :8000</small></div>
+            <div><span class="indicator indicator--idle"></span><b>plasma-adapter</b><small>not configured</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section token-section" id="tokens" aria-labelledby="tokens-title">
+      <div class="section-heading">
+        <p class="section-index">04 / IMPLEMENTATION</p>
+        <h2 id="tokens-title">Una fuente.<br>Muchos destinos.</h2>
+        <p>El core vive en JSON. CSS y Nix son los primeros adaptadores; NeoVim, VSCodium, Starship y Plasma forman la siguiente etapa.</p>
+      </div>
+      <div class="token-flow">
+        <div class="token-source"><span>CANONICAL</span><b>tokens.json</b><small>roles · values · types</small></div>
+        <div class="flow-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="token-targets">
+          <a href="tokens/tokens.css"><span>WEB</span><b>tokens.css</b><small>ready ↗</small></a>
+          <a href="tokens/colors.nix"><span>NIX</span><b>colors.nix</b><small>ready ↗</small></a>
+          <div><span>EDITORS</span><b>NeoVim / VSCodium</b><small>planned</small></div>
+        </div>
+      </div>
+      <pre class="code-sample"><span>01</span> <em>.panel</em> {
+<span>02</span>   color: <b>var</b>(<i>--vg-color-text</i>);
+<span>03</span>   background: <b>var</b>(<i>--vg-color-surface</i>);
+<span>04</span>   border: <b>var</b>(<i>--vg-border-width</i>) solid <b>var</b>(<i>--vg-color-border</i>);
+<span>05</span>   padding: <b>var</b>(<i>--vg-space-4</i>);
+<span>06</span> }</pre>
+    </section>
+
+    <section class="closing ruled-section" aria-labelledby="closing-title">
+      <p class="section-index">05 / NEXT</p>
+      <div>
+        <h2 id="closing-title">Úsalo. Ténsalo.<br><span>Hazlo consistente.</span></h2>
+        <p>La versión 0.1 fija los fundamentos. El siguiente paso es comprobarlos en editores, terminales y Plasma, y documentar dónde cada plataforma exige una aproximación.</p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="DESIGN.md">Leer DESIGN.md</a>
+          <a class="button button--secondary" href="docs/integrations.md">Ver integraciones</a>
+        </div>
+      </div>
+      <ol class="roadmap">
+        <li class="done"><span>01</span><div><b>Core</b><small>tokens + docs</small></div></li>
+        <li><span>02</span><div><b>Editores</b><small>NeoVim + VSCodium</small></div></li>
+        <li><span>03</span><div><b>Desktop</b><small>Plasma + applications</small></div></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 5h7l6 16 6-16h7l-9 22h-8z" fill="currentColor"/></svg><span>VERDIGRIS</span></a>
+    <p>Industrial-digital · flat · modular</p>
+    <p>v0.1 / 2026</p>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
