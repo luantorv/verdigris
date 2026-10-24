@@ -8,9 +8,13 @@ Verdigris persigue coherencia perceptiva, no igualdad técnica imposible. Cada a
 
 Mapear primero editor, paneles, selección, foco, búsqueda y diagnósticos. Después cubrir Treesitter, LSP, completion, Git y plugins. El error usa rojo; warning arena; info azul claro. Diferencia cursor, selección visual y coincidencia de búsqueda.
 
+La primera implementación propia de referencia se mantiene en [`luantorv/nixconf`](https://github.com/luantorv/nixconf).
+
 ## VSCodium
 
 Cubrir editor, sidebar, tabs, status bar, terminal integrada, notifications y controles. Validar temas de alto contraste y evitar que el chrome de la aplicación compita con el código. Mantener equivalencia semántica con NeoVim cuando ambos expongan el mismo concepto.
+
+La captura de referencia usa [Tapetum Verdigris](https://marketplace.visualstudio.com/items?itemName=tuguidragos.tapetum), principal inspiración cromática de este sistema.
 
 ## Terminal, shell y Starship
 

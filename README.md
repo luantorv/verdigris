@@ -35,6 +35,10 @@ No requiere dependencias ni compilación. La publicación automatizada está def
 
 Verdigris está en **versión 0.1**. Los fundamentos ya son utilizables, pero deben validarse en integraciones reales antes de estabilizar la API de tokens. Las decisiones abiertas se mantienen en [DESIGN.md](./DESIGN.md#decisiones-abiertas).
 
+## Origen e inspiración
+
+La identidad cromática de Verdigris está fuertemente inspirada en [Tapetum Verdigris](https://marketplace.visualstudio.com/items?itemName=tuguidragos.tapetum), parte de la extensión Tapetum Theme de Țugui Dragoș. La captura de VSCodium usa ese esquema; la adaptación para NeoVim es una implementación propia mantenida en [`luantorv/nixconf`](https://github.com/luantorv/nixconf).
+
 ## Licencia
 
 Copyright © 2026 Luis Reis Viera

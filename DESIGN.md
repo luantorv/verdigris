@@ -6,6 +6,12 @@ Verdigris es un lenguaje visual para entornos y herramientas de desarrollo. Su i
 
 Este documento es la referencia portátil del sistema: sirve para trasladar Verdigris a una aplicación web, un editor, una terminal o un escritorio sin depender de la implementación de este repositorio. Los detalles y ejemplos viven en [`docs/`](./docs/); los valores consumibles, en [`tokens/`](./tokens/).
 
+## Origen e influencia
+
+La dirección cromática de Verdigris está fuertemente inspirada en [Tapetum Verdigris](https://marketplace.visualstudio.com/items?itemName=tuguidragos.tapetum), uno de los esquemas incluidos en Tapetum Theme por Țugui Dragoș. Verdigris toma esa paleta como punto de partida y la extiende hacia un sistema más amplio de superficies, geometría, componentes, interacción e integraciones.
+
+La referencia de VSCodium usa el esquema original de Tapetum. La implementación mostrada en NeoVim es una adaptación propia y forma parte de la configuración pública [`luantorv/nixconf`](https://github.com/luantorv/nixconf).
+
 ## Principio rector
 
 > Verdigris debe reconocerse incluso cuando se le quitan los colores.
