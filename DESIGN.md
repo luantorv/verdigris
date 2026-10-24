@@ -1,6 +1,6 @@
 # Verdigris Design System
 
-**Versión 0.1 · especificación de trabajo · octubre de 2026**
+**Especificación · octubre de 2026**
 
 Verdigris es un lenguaje visual para entornos y herramientas de desarrollo. Su identidad combina superficies oscuras de matiz cálido, tipografía monoespaciada, módulos rectangulares, bordes finos y acentos cromáticos con función explícita.
 
@@ -135,7 +135,7 @@ Usa una sola familia lineal, preferentemente Lucide cuando la plataforma lo perm
 
 ## Componentes
 
-El catálogo inicial incluye paneles, tarjetas, botones, campos, etiquetas, notificaciones, progreso, listas, tooltips, indicadores, menús y separadores. Cada componente comparte las mismas reglas de estado.
+El catálogo incluye paneles, tarjetas, botones, campos, etiquetas, notificaciones, progreso, listas, tooltips, indicadores, menús y separadores. Cada componente comparte las mismas reglas de estado.
 
 ### Botones
 
@@ -230,13 +230,7 @@ tokens.json (core)
 └── typography.nix
 ```
 
-La arquitectura objetivo tiene cinco capas:
-
-1. **Core:** nombres y valores canónicos de color, tipografía, geometría y estados.
-2. **Adapters:** conversión a formatos específicos.
-3. **Applications:** configuraciones de cada herramienta.
-4. **Documentation:** reglas, muestras y decisiones.
-5. **Validation:** consistencia, valores faltantes y contraste.
+El repositorio separa el **core** canónico, los formatos CSS y Nix, la documentación y los ejemplos visuales. Esta separación mantiene los significados compartidos sin exigir que todas las plataformas usen la misma sintaxis.
 
 La nomenclatura usa minúsculas y kebab-case en CSS/JSON. Un adaptador puede cambiar la sintaxis, no el significado.
 
@@ -258,49 +252,15 @@ La nomenclatura usa minúsculas y kebab-case en CSS/JSON. Un adaptador puede cam
 
 ## Integraciones
 
-El orden de implementación recomendado es:
+Las referencias documentadas son VSCodium con Tapetum Verdigris y la adaptación propia para NeoVim. Ambas muestran cómo los roles cromáticos y la jerarquía se conservan en interfaces diferentes. Consulta [integraciones](./docs/integrations.md) y la galería del sitio.
 
-1. **Editores:** NeoVim y VSCodium; sintaxis, LSP, diagnósticos, Git y chrome de interfaz.
-2. **Terminal:** Starship, shell, CLI y TUI; selección, foco, errores, tablas y progreso.
-3. **KDE Plasma:** panel, lanzador, notificaciones, widgets, decoración y foco de ventana.
-4. **Aplicaciones:** adaptaciones Qt, GTK y web, priorizando coherencia perceptiva.
+## Decisiones adoptadas
 
-Las limitaciones conocidas y los contratos de cada destino se documentan en [integraciones](./docs/integrations.md).
-
-## Hoja de ruta
-
-### 0.1 · Core y referencia
-
-- [x] Formalizar paleta, superficies y roles semánticos.
-- [x] Definir tipografía, geometría, densidad y estados.
-- [x] Crear tokens canónicos en JSON, CSS y Nix.
-- [x] Documentar el catálogo inicial de componentes.
-- [x] Publicar una demostración estática accesible.
-
-### 0.2 · Validación en herramientas
-
-- [ ] Probar temas de NeoVim y VSCodium.
-- [ ] Probar Starship y una terminal completa.
-- [ ] Capturar convivencia real entre editor y terminal.
-- [ ] Automatizar validación de tokens y contraste.
-
-### 0.3 · Escritorio
-
-- [ ] Definir el panel y un conjunto pequeño de widgets.
-- [ ] Adaptar menús, tooltips y notificaciones.
-- [ ] Evaluar límites reales de KDE Plasma, Qt y GTK.
-- [ ] Documentar excepciones por toolkit.
-
-## Decisiones abiertas
-
-La versión `0.1` adopta superficies planas, turquesa como acento global, densidad contextual y bordes selectivos como hipótesis de trabajo. Aún debe validarse:
-
-- Si los paneles necesitan una elevación adicional muy sutil en contextos de escritorio.
-- Si el acento de selección debe variar en editores por compatibilidad semántica.
-- Qué densidad predeterminada resulta mejor en Plasma a distintas escalas.
-- Si una futura variante clara aporta valor suficiente para ampliar el sistema.
-- Qué personalizaciones de Plasma pueden ser nativas y cuáles requieren widgets.
-- Si la integración declarativa con Nix debe convertirse en el adaptador principal.
+- Las superficies son planas y expresan elevación mediante cambios tonales.
+- El turquesa funciona como acento global de identidad, foco y selección.
+- La densidad cambia según el contexto sin abandonar la cuadrícula de 4 px.
+- Los bordes aparecen cuando ayudan a separar o explicar la estructura.
+- El sistema es oscuro y usa fondos cálidos como parte de su identidad.
 
 ## Criterios de aceptación
 
@@ -315,7 +275,7 @@ Una implementación es coherente con Verdigris cuando:
 
 ## Gobernanza
 
-Los cambios incompatibles en nombres o significado de tokens requieren una nueva versión y una guía de migración. Un cambio de valor que conserva significado puede entrar en una versión menor, acompañado de pruebas visuales y de contraste. Las aplicaciones deben consumir tokens semánticos; los valores hexadecimales directos se reservan a los adaptadores.
+Los cambios incompatibles en nombres o significado de tokens requieren una guía de migración. Todo cambio de valor debe acompañarse de pruebas visuales y de contraste. Las aplicaciones consumen tokens semánticos; los valores hexadecimales directos se reservan a los formatos de distribución.
 
 ## Licencia y reutilización
 

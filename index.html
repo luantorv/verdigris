@@ -22,7 +22,6 @@
         <path d="M3 5h7l6 16 6-16h7l-9 22h-8z" fill="currentColor"/>
       </svg>
       <span>VERDIGRIS</span>
-      <span class="version">0.1</span>
     </a>
     <nav class="site-nav" aria-label="Navegación principal">
       <a href="#foundations">Fundamentos</a>
@@ -204,7 +203,7 @@
             <p class="mini-label">SYSTEM / SERVICES</p>
             <div><span class="indicator indicator--ok"></span><b>design-tokens</b><small>running</small></div>
             <div><span class="indicator indicator--info"></span><b>preview-server</b><small>listening :8000</small></div>
-            <div><span class="indicator indicator--idle"></span><b>plasma-adapter</b><small>not configured</small></div>
+            <div><span class="indicator indicator--ok"></span><b>documentation</b><small>synced</small></div>
           </div>
         </div>
       </div>
@@ -259,8 +258,8 @@
     <section class="section token-section" id="tokens" aria-labelledby="tokens-title">
       <div class="section-heading">
         <p class="section-index">05 / IMPLEMENTATION</p>
-        <h2 id="tokens-title">Una fuente.<br>Muchos destinos.</h2>
-        <p>El core vive en JSON. CSS y Nix son los primeros adaptadores; NeoVim, VSCodium, Starship y Plasma forman la siguiente etapa.</p>
+        <h2 id="tokens-title">Una fuente.<br>Formatos listos.</h2>
+        <p>El core vive en JSON. CSS y Nix exponen los mismos roles para integrarlos sin duplicar decisiones visuales.</p>
       </div>
       <div class="token-flow">
         <div class="token-source"><span>CANONICAL</span><b>tokens.json</b><small>roles · values · types</small></div>
@@ -268,7 +267,7 @@
         <div class="token-targets">
           <a href="tokens/tokens.css"><span>WEB</span><b>tokens.css</b><small>ready ↗</small></a>
           <a href="tokens/colors.nix"><span>NIX</span><b>colors.nix</b><small>ready ↗</small></a>
-          <div><span>EDITORS</span><b>NeoVim / VSCodium</b><small>planned</small></div>
+          <a href="DESIGN.md"><span>GUIDE</span><b>DESIGN.md</b><small>documented ↗</small></a>
         </div>
       </div>
       <pre class="code-sample"><span>01</span> <em>.panel</em> {
@@ -280,27 +279,27 @@
     </section>
 
     <section class="closing ruled-section" aria-labelledby="closing-title">
-      <p class="section-index">06 / NEXT</p>
+      <p class="section-index">06 / USE</p>
       <div>
-        <h2 id="closing-title">Úsalo. Ténsalo.<br><span>Hazlo consistente.</span></h2>
-        <p>La versión 0.1 fija los fundamentos. El siguiente paso es comprobarlos en editores, terminales y Plasma, y documentar dónde cada plataforma exige una aproximación.</p>
+        <h2 id="closing-title">Tómalo. Adáptalo.<br><span>Hazlo consistente.</span></h2>
+        <p>La especificación, los tokens y los ejemplos forman una base autocontenida para aplicar Verdigris sin reconstruir sus decisiones visuales.</p>
         <div class="hero-actions">
           <a class="button button--primary" href="DESIGN.md">Leer DESIGN.md</a>
-          <a class="button button--secondary" href="docs/integrations.md">Ver integraciones</a>
+          <a class="button button--secondary" href="tokens/tokens.json">Usar los tokens</a>
         </div>
       </div>
-      <ol class="roadmap">
-        <li class="done"><span>01</span><div><b>Core</b><small>tokens + docs</small></div></li>
-        <li><span>02</span><div><b>Editores</b><small>NeoVim + VSCodium</small></div></li>
-        <li><span>03</span><div><b>Desktop</b><small>Plasma + applications</small></div></li>
-      </ol>
+      <ul class="system-inventory">
+        <li><span>01</span><div><b>Especificación</b><small>principios + componentes</small></div></li>
+        <li><span>02</span><div><b>Tokens</b><small>JSON + CSS + Nix</small></div></li>
+        <li><span>03</span><div><b>Referencias</b><small>VSCodium + NeoVim</small></div></li>
+      </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 5h7l6 16 6-16h7l-9 22h-8z" fill="currentColor"/></svg><span>VERDIGRIS</span></a>
     <p>Industrial-digital · flat · modular</p>
-    <p>v0.1 · <a href="LICENSE">Apache-2.0</a> · 2026</p>
+    <p><a href="LICENSE">Apache-2.0</a> · 2026</p>
   </footer>
 
   <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>

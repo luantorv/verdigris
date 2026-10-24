@@ -15,7 +15,7 @@ Verdigris es un sistema de diseño oscuro para herramientas de desarrollo: técn
 .
 ├── DESIGN.md              # Especificación portátil
 ├── docs/                  # Decisiones y guías detalladas
-├── tokens/                # Fuente canónica y adaptadores iniciales
+├── tokens/                # Fuente canónica y formatos consumibles
 ├── examples/              # Uso y catálogo de referencia
 ├── assets/                # Estilos y comportamiento de la demo
 └── index.html             # Sitio de GitHub Pages
@@ -30,10 +30,6 @@ python3 -m http.server 8000
 ```
 
 No requiere dependencias ni compilación. La publicación automatizada está definida en [`.github/workflows/pages.yml`](./.github/workflows/pages.yml).
-
-## Estado
-
-Verdigris está en **versión 0.1**. Los fundamentos ya son utilizables, pero deben validarse en integraciones reales antes de estabilizar la API de tokens. Las decisiones abiertas se mantienen en [DESIGN.md](./DESIGN.md#decisiones-abiertas).
 
 ## Origen e inspiración
 
