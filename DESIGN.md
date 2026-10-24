@@ -310,3 +310,7 @@ Una implementación es coherente con Verdigris cuando:
 ## Gobernanza
 
 Los cambios incompatibles en nombres o significado de tokens requieren una nueva versión y una guía de migración. Un cambio de valor que conserva significado puede entrar en una versión menor, acompañado de pruebas visuales y de contraste. Las aplicaciones deben consumir tokens semánticos; los valores hexadecimales directos se reservan a los adaptadores.
+
+## Licencia y reutilización
+
+La especificación, los tokens, la documentación y las implementaciones de referencia de Verdigris se distribuyen bajo la [Apache License 2.0](./LICENSE). Pueden usarse, modificarse y redistribuirse respetando sus condiciones y avisos aplicables.

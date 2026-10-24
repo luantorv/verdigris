@@ -34,3 +34,9 @@ No requiere dependencias ni compilación. La publicación automatizada está def
 ## Estado
 
 Verdigris está en **versión 0.1**. Los fundamentos ya son utilizables, pero deben validarse en integraciones reales antes de estabilizar la API de tokens. Las decisiones abiertas se mantienen en [DESIGN.md](./DESIGN.md#decisiones-abiertas).
+
+## Licencia
+
+Copyright © 2026 Luis Reis Viera
+
+El código, los tokens, la documentación y los ejemplos de este repositorio se distribuyen bajo la [Apache License 2.0](./LICENSE) (`Apache-2.0`).

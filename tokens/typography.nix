@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Luis Reis Viera
+# SPDX-License-Identifier: Apache-2.0
+
 {
   family = [ "JetBrains Mono" "Cascadia Code" "SFMono-Regular" "Consolas" "monospace" ];
   size = { xs = 11; small = 12; medium = 14; large = 16; xl = 20; xxl = 24; metric = 28; };
