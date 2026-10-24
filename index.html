@@ -27,6 +27,7 @@
     <nav class="site-nav" aria-label="Navegación principal">
       <a href="#foundations">Fundamentos</a>
       <a href="#components">Componentes</a>
+      <a href="#showcase">En uso</a>
       <a href="#tokens">Tokens</a>
       <a class="nav-source" href="DESIGN.md">Especificación <span aria-hidden="true">↗</span></a>
     </nav>
@@ -209,9 +210,55 @@
       </div>
     </section>
 
+    <section class="section showcase-section" id="showcase" aria-labelledby="showcase-title">
+      <div class="section-heading section-heading--row">
+        <div>
+          <p class="section-index">04 / IN PRACTICE</p>
+          <h2 id="showcase-title">Del esquema<br>al entorno.</h2>
+        </div>
+        <div>
+          <p>Una referencia directa y una adaptación propia muestran cómo la misma identidad atraviesa editores con estructuras distintas.</p>
+        </div>
+      </div>
+
+      <div class="showcase-grid">
+        <figure class="showcase-card">
+          <a class="screenshot-link" href="assets/screenshots/VSCodium.png" target="_blank" rel="noopener" aria-label="Abrir captura de VSCodium a tamaño completo">
+            <img src="assets/screenshots/VSCodium.png" width="1920" height="1080" loading="lazy" decoding="async" alt="VSCodium con tres paneles: explorador de archivos y código CSS y JavaScript usando el esquema Tapetum Verdigris">
+            <span>Ampliar <span aria-hidden="true">↗</span></span>
+          </a>
+          <figcaption>
+            <p class="mini-label">REFERENCE / VSCODIUM</p>
+            <h3>Tapetum Verdigris</h3>
+            <p>La referencia cromática original, aplicada al propio repositorio de Verdigris dentro de VSCodium.</p>
+            <a href="https://marketplace.visualstudio.com/items?itemName=tuguidragos.tapetum" target="_blank" rel="noopener">Ver Tapetum Theme <span aria-hidden="true">↗</span></a>
+          </figcaption>
+        </figure>
+
+        <figure class="showcase-card">
+          <a class="screenshot-link" href="assets/screenshots/NeoVim.png" target="_blank" rel="noopener" aria-label="Abrir captura de NeoVim a tamaño completo">
+            <img src="assets/screenshots/NeoVim.png" width="1920" height="1080" loading="lazy" decoding="async" alt="NeoVim en Konsole con tres paneles de código Python, LaTeX y JavaScript usando una adaptación propia de Verdigris">
+            <span>Ampliar <span aria-hidden="true">↗</span></span>
+          </a>
+          <figcaption>
+            <p class="mini-label">ADAPTATION / NEOVIM</p>
+            <h3>Implementación propia</h3>
+            <p>Una traducción de los mismos roles cromáticos a NeoVim, integrada declarativamente en NixOS.</p>
+            <a href="https://github.com/luantorv/nixconf" target="_blank" rel="noopener">Explorar nixconf <span aria-hidden="true">↗</span></a>
+          </figcaption>
+        </figure>
+      </div>
+
+      <aside class="inspiration-note" aria-label="Crédito de inspiración">
+        <p class="mini-label">CREDIT / COLOR ORIGIN</p>
+        <p>Verdigris está fuertemente inspirado en el esquema <strong>Tapetum Verdigris</strong> de Țugui Dragoș. A partir de esa referencia cromática, este proyecto desarrolla reglas propias para geometría, densidad, componentes e integración entre aplicaciones.</p>
+        <a href="https://marketplace.visualstudio.com/items?itemName=tuguidragos.tapetum" target="_blank" rel="noopener">Fuente original <span aria-hidden="true">↗</span></a>
+      </aside>
+    </section>
+
     <section class="section token-section" id="tokens" aria-labelledby="tokens-title">
       <div class="section-heading">
-        <p class="section-index">04 / IMPLEMENTATION</p>
+        <p class="section-index">05 / IMPLEMENTATION</p>
         <h2 id="tokens-title">Una fuente.<br>Muchos destinos.</h2>
         <p>El core vive en JSON. CSS y Nix son los primeros adaptadores; NeoVim, VSCodium, Starship y Plasma forman la siguiente etapa.</p>
       </div>
@@ -233,7 +280,7 @@
     </section>
 
     <section class="closing ruled-section" aria-labelledby="closing-title">
-      <p class="section-index">05 / NEXT</p>
+      <p class="section-index">06 / NEXT</p>
       <div>
         <h2 id="closing-title">Úsalo. Ténsalo.<br><span>Hazlo consistente.</span></h2>
         <p>La versión 0.1 fija los fundamentos. El siguiente paso es comprobarlos en editores, terminales y Plasma, y documentar dónde cada plataforma exige una aproximación.</p>
